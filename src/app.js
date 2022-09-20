@@ -1,13 +1,13 @@
 import express from "express";
 import morgan from "morgan";
 //Routes
-import noticiaRoutes from "./routes/noticia.routes";
-import usuarioRoutes from "./routes/usuario.routes";
+import noticiaRoutes from "./routes/noticia.routes.js";
+import usuarioRoutes from "./routes/usuario.routes.js";
 
 const app = express();
 
 //Settings
-app.set("port", 4000);
+app.set("port", process.env.PORT || 4000);
 
 //Middlewares
 app.use(morgan("dev"));
